@@ -311,13 +311,11 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
-
-body {
-  color: #F9C802;
-  background: #2D2241; }
 
 body {
   background-color: #96a5cc;
@@ -325,17 +323,16 @@ body {
   background-image: -webkit-linear-gradient(left, #96a5cc 0%, #ffffff 100%);
   background-image: -o-linear-gradient(left, #96a5cc 0%, #ffffff 100%);
   background-image: linear-gradient(90deg, #96a5cc 0%, #ffffff 100%);
-  color: #000; }
+  color: black; }
 
 .header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: header; }
-
-.header__title {
-  color: #00487c;
-  margin-bottom: 48px; }
+  .header__title {
+    color: #00487c;
+    margin-bottom: 48px; }
 
 .site-header {
   background: #96a5cc;
@@ -346,6 +343,9 @@ body {
   position: fixed;
   width: 100%;
   top: 0; }
+  @media (max-width: 640px) {
+    .site-header {
+      min-height: 48px; } }
 
 .navigation__list {
   list-style: none;
@@ -356,14 +356,41 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media (max-width: 640px) {
+    .navigation__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      display: none; }
+      .navigation__list--visible {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
 
 .navigation__item {
   display: block;
   margin: 0 16px; }
+  @media (max-width: 640px) {
+    .navigation__item {
+      margin: 16px; } }
 
 .navigation__link {
   color: #e2e6f1;
   text-decoration: none; }
+
+@media (min-width: 640px) {
+  .navigation__switcher {
+    display: none; } }
+
+@media (max-width: 640px) {
+  .navigation__switcher {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    color: #00487c; } }
 
 .main {
   grid-area: content;
@@ -374,9 +401,24 @@ body {
   grid-gap: 16px;
   max-width: 700px;
   margin: 128px auto; }
+  @media (min-width: 640px) {
+    .main {
+      max-width: 900px; } }
+  @media (max-width: 640px) {
+    .main {
+          grid-template-areas: "header header" "about diary";
+      -ms-grid-column: 1;
+      grid-column: 1fr; }
+    .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3; } }
 
 .about__header {
   color: #1460aa; }
+
+.about__link {
+  color: #1a936f; }
 
 .about__picture {
   width: 100%;
@@ -388,12 +430,8 @@ body {
 .about__paragraph {
   padding: 0;
   line-height: 24px; }
-
-.about__paragraph--mini {
-  font-size: 10px; }
-
-.about__link {
-  color: #1a936f; }
+  .about__paragraph--mini {
+    font-size: 10px; }
 
 .diary {
   -ms-grid-row: 3;
@@ -404,36 +442,46 @@ body {
       grid-template-areas: "headerDay headerDay" "day day";
   grid-column: 0.5fr 0.5fr; }
 
-.diary__header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: headerDay;
-  text-align: center;
-  color: #1460aa; }
+@media (max-width: 640px) {
+    .diary {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3; } }
+  .diary__header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: headerDay;
+    text-align: center;
+    color: #1460aa; }
+  @media (max-width: 640px) {
+    .diary {
+          grid-template-areas: "headerDay" "day";
+      -ms-grid-column: 1;
+      grid-column: 1fr; }
+    .diary__header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1; } }
 
 .day {
   padding: 16px; }
+  .day__header {
+    color: #0496ff;
+    margin: 0 0 16px;
+    font-size: 20px; }
+    .day__header--weekend {
+      color: #f14545; }
+  .day__link {
+    color: #1a936f; }
+  .day__paragraph {
+    padding: 0;
+    margin: 0;
+    line-height: 24px; }
 
-.day__header {
-  color: #0496ff;
-  margin: 0 0 16px;
-  font-size: 20px; }
-
-.day__header--weekend {
-  color: red; }
-
-.day__paragraph {
-  padding: 0;
-  margin: 0;
-  line-height: 24px; }
-
-.day__link {
-  color: #1a936f; }
-
-.article__title {
-  color: #00487c;
-  padding: 24px 0 0 0; }
+.article__footer {
+  padding: 24px;
+  font-style: italic;
+  color: #3c359b; }
 
 .article__paragraph {
   padding: 0; }
@@ -442,19 +490,16 @@ body {
   width: 100%;
   max-width: 200px;
   display: block; }
+  .article__picture--left {
+    float: left;
+    margin: 0 16px 16px 0; }
+  .article__picture--right {
+    float: right;
+    margin: 0 0 0 16px; }
 
-.article__picture--right {
-  float: right;
-  margin: 0 0 0 16px; }
-
-.article__picture--left {
-  float: left;
-  margin: 0 16px 16px 0; }
-
-.article__footer {
-  padding: 24px;
-  font-style: italic;
-  color: #3c359b; }
+.article__title {
+  color: #00487c;
+  padding: 24px 0 0 0; }
 
 .footer {
   position: fixed;
@@ -471,54 +516,5 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #96a5cc; }
-
-@media (min-width: 640px) {
-  .main {
-    max-width: 900px; }
-  .navigation__switcher {
-    display: none; } }
-
-@media (max-width: 640px) {
-  .main {
-        grid-template-areas: "header header" "about diary";
-    -ms-grid-column: 1;
-    grid-column: 1fr;
-    grid-gap: 2px; }
-  .diary {
-        grid-template-areas: "headerDay" "day";
-    -ms-grid-column: 1;
-    grid-column: 1fr; }
-  .navigation__item {
-    margin: 16px; }
-  .navigation__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    display: none; }
-  .navigation__list--visible {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .navigation__switcher {
-    border: none;
-    background: none;
-    position: absolute;
-    right: 16px;
-    top: 16px;
-    color: #00487c; }
-  .site-header {
-    min-height: 48px; }
-  .header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3; }
-  .diary {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3; }
-  .diary__header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1; } }
 
 /*# sourceMappingURL=main.css.map */

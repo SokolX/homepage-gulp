@@ -1,236 +1,224 @@
 @import "_normalize";
 @import "_variables";
 
-
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
-  color: $yellow;
-  background: $violet;
-}
-
-body {
-	background-color: #96a5cc;
-	background-image: linear-gradient(90deg, #96a5cc 0%, #ffffff 100%);
-	color: #000;
+  background-color: $lightblue;
+  background-image: linear-gradient(90deg, $lightblue 0%, $white 100%);
+  color: black;
 }
 
 .header {
-	grid-area: header;
-}
-.header__title {
-	color: #00487c;
-	margin-bottom: 48px;
+  grid-area: header;
+  &__title {
+    color: $darkblue;
+    margin-bottom: 48px;
+  }
 }
 
 .site-header {
-	background: #96a5cc;
-	box-sizing: border-box;
-	left: 0;
-	padding: 8px;
-	position: fixed;
-	width: 100%;
-	top: 0;
+  background: $lightblue;
+  box-sizing: border-box;
+  left: 0;
+  padding: 8px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  @media (max-width: $telephone) {
+    min-height: 48px;
+  }
 }
 
 .navigation {
+  &__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    @media (max-width: $telephone) {
+      flex-direction: column;
+      display: none;
+      &--visible {
+        display: flex;
+      }
+    }
+  }
 
-}
+  &__item {
+    display: block;
+    margin: 0 16px;
+    @media (max-width: $telephone) {
+      margin: 16px;
+    }
+  }
 
-.navigation__list {
-	list-style: none;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-}
+  &__link {
+    color: $grey;
+    text-decoration: none;
+  }
+  &__switcher {
+    @media (min-width: $telephone) {
+      display: none;
+    }
 
-.navigation__item {
-	display: block;
-	margin: 0 16px;
-}
-
-.navigation__link {
-	color: #e2e6f1;
-	text-decoration: none;
+    @media (max-width: $telephone) {
+      border: none;
+      background: none;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      color: $darkblue;
+    }
+  }
 }
 
 .main {
-	grid-area: content;
-	display: grid;
-	grid-template-areas: "header header"
-	"about diary";
-	grid-column: 1fr 1fr;
-	grid-gap: 16px;
-	max-width: 700px;
-	margin: 128px auto;
+  grid-area: content;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "about diary";
+  grid-column: 1fr 1fr;
+  grid-gap: 16px;
+  max-width: 700px;
+  margin: 128px auto;
+
+  @media (min-width: $telephone) {
+    max-width: 900px;
+  }
+
+  @media (max-width: $telephone) {
+    grid-template-areas:
+      "header header"
+      "about diary";
+    grid-column: 1fr;
+  }
 }
 
-.about__header {
-	color: #1460aa;
-}
+.about {
+  &__header {
+    color: $mediumblue;
+  }
 
-.about__picture {
-	width: 100%;
-	max-width: 100px;
-	display: block;
-	float: left;
-	margin: 0 16px 16px 0;
-}
+  &__link {
+    color: #1a936f;
+  }
 
-.about__paragraph {
-	padding: 0;
-	line-height: 24px;
-}
+  &__picture {
+    width: 100%;
+    max-width: 100px;
+    display: block;
+    float: left;
+    margin: 0 16px 16px 0;
+  }
 
-.about__paragraph--mini {
-	font-size: 10px;
-}
+  &__paragraph {
+    padding: 0;
+    line-height: 24px;
 
-.about__link {
-	color: #1a936f;
+    &--mini {
+      font-size: 10px;
+    }
+  }
 }
 
 .diary {
-	grid-area: diary;
-	display: grid;
-	grid-template-areas: "headerDay headerDay"
-	"day day";
-	grid-column: 0.5fr 0.5fr;
-}
+  grid-area: diary;
+  display: grid;
+  grid-template-areas:
+    "headerDay headerDay"
+    "day day";
+  grid-column: 0.5fr 0.5fr;
 
-.diary__header {
-	grid-area: headerDay;
-	text-align: center;
-	color: #1460aa;
+  &__header {
+    grid-area: headerDay;
+    text-align: center;
+    color: #1460aa;
+  }
+
+  @media (max-width: $telephone) {
+    grid-template-areas:
+      "headerDay"
+      "day";
+    grid-column: 1fr;
+  }
 }
 
 .day {
-	padding: 16px;
-}
+  padding: 16px;
 
-.day__header {
-	color: #0496ff;
-	margin: 0 0 16px;
-	font-size: 20px;
-}
+  &__header {
+    color: $dayblue;
+    margin: 0 0 16px;
+    font-size: 20px;
 
-.day__header--weekend {
-	color: red;
-}
+    &--weekend {
+      color: $dayred;
+    }
+  }
 
-.day__paragraph {
-	padding: 0;
-	margin: 0;
-	line-height: 24px;
-}
+  &__link {
+    color: $lightgreen;
+  }
 
-.day__link {
-	color: #1a936f;
+  &__paragraph {
+    padding: 0;
+    margin: 0;
+    line-height: 24px;
+  }
 }
 
 .article {
+  &__footer {
+    padding: 24px;
+    font-style: italic;
+    color: $violet;
+  }
 
-}
+  &__paragraph {
+    padding: 0;
+  }
 
-.article__title {
-	color: #00487c;
-	padding: 24px 0 0 0;
-}
+  &__picture {
+    width: 100%;
+    max-width: 200px;
+    display: block;
 
-.article__paragraph {
-	padding: 0;
-}
+    &--left {
+      float: left;
+      margin: 0 16px 16px 0;
+    }
 
-.article__picture {
-	width: 100%;
-	max-width: 200px;
-	display: block;
-}
+    &--right {
+      float: right;
+      margin: 0 0 0 16px;
+    }
+  }
 
-.article__picture--right {
-	float: right;
-	margin: 0 0 0 16px;
-}
-
-.article__picture--left {
-	float: left;
-	margin: 0 16px 16px 0 ;
-}
-
-.article__footer {
-	padding: 24px;
-	font-style: italic;
-	color: #3c359b;
+  &__title {
+    color: $darkblue;
+    padding: 24px 0 0 0;
+  }
 }
 
 .footer {
-	position: fixed;
-	width: 100%;
-	padding: 10px;
-	bottom: 0;
-	left: 0;
-	box-sizing: border-box;
-	display: flex;
-	justify-content: center;
-	background-color: #96a5cc;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background-color: $lightblue;
 }
-
-@media (min-width: 640px) {
-	
-	.main {
-		max-width: 900px;
-	}
-
-	.navigation__switcher {
-		display: none;
-	}
-}
-
-@media (max-width: 640px) {
-
-	.main {
-		grid-template-areas: "header header"
-		"about diary";
-		grid-column: 1fr;
-		grid-gap: 2px;
-	}
-
-	.diary {
-		grid-template-areas: "headerDay"
-		"day";
-		grid-column: 1fr;
-	}
-
-
-	.navigation__item {
-		margin: 16px;
-	}
-
-	.navigation__list {
-		flex-direction: column;
-		display: none;
-	}
-
-	.navigation__list--visible {
-		display: flex;
-	}
-
-	.navigation__switcher {
-		border: none;
-		background: none;
-		position: absolute;
-		right: 16px;
-		top: 16px;
-		color: #00487c;
-	}
-
-	.site-header {
-		min-height: 48px;
-	}
-}	
