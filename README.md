@@ -1,5 +1,5 @@
 # Simple page with [my cat Leopold](https://sokolx.github.io/homepage-gulp/)
-![Screen web page](https://sokolx.github.io/dist/assets/img/example.png)
+![Screen web page](github/example.png)
 
 
 ## Tehnologies and tools used in this project:
