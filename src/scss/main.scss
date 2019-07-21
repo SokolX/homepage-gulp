@@ -22,7 +22,7 @@ body {
   grid-area: header;
   &__title {
     color: $darkblue;
-    margin-bottom: 48px;
+    margin-bottom: 16px;
   }
 }
 
@@ -98,7 +98,7 @@ body {
   grid-column: 1fr 1fr;
   grid-gap: 16px;
   max-width: 700px;
-  margin: 128px auto;
+  margin: 64px auto;
 
   @media (min-width: $telephone) {
     max-width: 900px;
@@ -119,6 +119,11 @@ body {
 
   &__link {
     color: #1a936f;
+    text-decoration: none;
+    &:hover {
+    color: $darkblue;
+    border-bottom: $hoverStyleLink;
+    }
   }
 
   &__picture {
@@ -148,7 +153,7 @@ body {
   grid-template-areas:
     "headerDay headerDay"
     "day day";
-  grid-column: 0.5fr 0.5fr;
+  grid-column: 1fr 1fr;
 
   &__header {
     grid-area: headerDay;
@@ -169,9 +174,8 @@ body {
 
   &__header {
     color: $dayblue;
-    margin: 0 0 16px;
-    font-size: 20px;
-
+    margin: 0 0 8px 0;
+    font-size: 16px;
     &--weekend {
       color: $dayred;
     }
