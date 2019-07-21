@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
 //font
 $fontFamily: 'Source Sans Pro', sans-serif;
 
@@ -6,6 +6,7 @@ $fontFamily: 'Source Sans Pro', sans-serif;
 $black: #000000;
 
 $darkblue: #00487c;
+$darkgrey: #666;
 $dayblue: #0496ff;
 $dayred: #f14545;
 
@@ -16,9 +17,14 @@ $lightgreen: #1a936f;
 
 $mediumblue: #1460aa;
 
+$orange:#E59400;
+
 $violet: #3c359b;
 $white: #ffffff;
 
 
 //resolution for media query
 $telephone: 640px;
+
+//link style hover
+$hoverStyleLink: $orange solid 2px;  
