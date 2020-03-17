@@ -13,7 +13,7 @@ html {
 
 body {
   background-color: $lightblue;
-  background-image: linear-gradient(90deg, $grey 30%, $white 100%);
+  background: $navy;
   color: black;
   font-family: $fontFamily;
 }
@@ -21,7 +21,7 @@ body {
 .header {
   grid-area: header;
   &__title {
-    color: $darkblue;
+    color: $white;
     margin-bottom: 16px;
   }
 }
@@ -170,12 +170,19 @@ body {
 }
 
 .day {
-  padding: 16px;
+  padding: 0.5rem;
+  background: $violet;
+  color: $lightpink;
+  margin: 0.2rem;
+  border-radius: 0.5rem;
 
   &__header {
-    color: $dayblue;
+    color: $lightgreen;
+    background: $navy;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
     margin: 0 0 8px 0;
-    font-size: 16px;
+    font-size: 1rem;
     &--weekend {
       color: $dayred;
     }
@@ -199,7 +206,7 @@ body {
 
 .article {
   &__footer {
-    padding: 24px;
+    padding: 1.5rem;
     font-style: italic;
     color: $violet;
   }
@@ -233,12 +240,12 @@ body {
 .footer {
   position: fixed;
   width: 100%;
-  padding: 10px;
+  padding: 1rem;
   bottom: 0;
   left: 0;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  background-color: $darkgrey;
+  background-color: $violet;
   color: $white;
 }
