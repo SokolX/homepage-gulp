@@ -142,7 +142,7 @@ body {
     line-height: 24px;
 
     &--mini {
-      font-size: 10px;
+      font-size: 0.5rem;
     }
   }
 }
@@ -158,7 +158,7 @@ body {
   &__header {
     grid-area: headerDay;
     text-align: center;
-    color: #1460aa;
+    color: $white;
   }
 
   @media (max-width: $telephone) {
@@ -181,7 +181,7 @@ body {
     background: $navy;
     border-radius: 0.2rem;
     padding: 0.3rem;
-    margin: 0 0 8px 0;
+    margin: 0 0 0.5rem 0;
     font-size: 1rem;
     &--weekend {
       color: $dayred;
@@ -200,7 +200,7 @@ body {
   &__paragraph {
     padding: 0;
     margin: 0;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
 }
 
@@ -222,25 +222,25 @@ body {
 
     &--left {
       float: left;
-      margin: 0 16px 16px 0;
+      margin: 0 1rem 1rem 0;
     }
 
     &--right {
       float: right;
-      margin: 0 0 0 16px;
+      margin: 0 0 0 1rem;
     }
   }
 
   &__title {
     color: $darkblue;
-    padding: 24px 0 0 0;
+    padding: 1.5rem 0 0 0;
   }
 }
 
 .footer {
   position: fixed;
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   bottom: 0;
   left: 0;
   box-sizing: border-box;

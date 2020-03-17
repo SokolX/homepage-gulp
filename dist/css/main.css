@@ -441,7 +441,7 @@ body {
   padding: 0;
   line-height: 24px; }
   .about__paragraph--mini {
-    font-size: 10px; }
+    font-size: 0.5rem; }
 
 .diary {
   -ms-grid-row: 3;
@@ -462,7 +462,7 @@ body {
     -ms-grid-column-span: 2;
     grid-area: headerDay;
     text-align: center;
-    color: #1460aa; }
+    color: #ffffff; }
   @media (max-width: 640px) {
     .diary {
           grid-template-areas: "headerDay" "day";
@@ -484,7 +484,7 @@ body {
     background: #1A2252;
     border-radius: 0.2rem;
     padding: 0.3rem;
-    margin: 0 0 8px 0;
+    margin: 0 0 0.5rem 0;
     font-size: 1rem; }
     .day__header--weekend {
       color: #f14545; }
@@ -497,7 +497,7 @@ body {
   .day__paragraph {
     padding: 0;
     margin: 0;
-    line-height: 24px; }
+    line-height: 1.5rem; }
 
 .article__footer {
   padding: 1.5rem;
@@ -513,19 +513,19 @@ body {
   display: block; }
   .article__picture--left {
     float: left;
-    margin: 0 16px 16px 0; }
+    margin: 0 1rem 1rem 0; }
   .article__picture--right {
     float: right;
-    margin: 0 0 0 16px; }
+    margin: 0 0 0 1rem; }
 
 .article__title {
   color: #00487c;
-  padding: 24px 0 0 0; }
+  padding: 1.5rem 0 0 0; }
 
 .footer {
   position: fixed;
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   bottom: 0;
   left: 0;
   -webkit-box-sizing: border-box;
