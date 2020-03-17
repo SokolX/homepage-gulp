@@ -320,10 +320,7 @@ html {
 
 body {
   background-color: #96a5cc;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #e2e6f1), to(#ffffff));
-  background-image: -webkit-linear-gradient(left, #e2e6f1 30%, #ffffff 100%);
-  background-image: -o-linear-gradient(left, #e2e6f1 30%, #ffffff 100%);
-  background-image: linear-gradient(90deg, #e2e6f1 30%, #ffffff 100%);
+  background: #1A2252;
   color: black;
   font-family: "Source Sans Pro", sans-serif; }
 
@@ -333,7 +330,7 @@ body {
   -ms-grid-column-span: 3;
   grid-area: header; }
   .header__title {
-    color: #00487c;
+    color: #ffffff;
     margin-bottom: 16px; }
 
 .site-header {
@@ -477,15 +474,22 @@ body {
     -ms-grid-column-span: 1; } }
 
 .day {
-  padding: 16px; }
+  padding: 0.5rem;
+  background: #392AC8;
+  color: #9888A8;
+  margin: 0.2rem;
+  border-radius: 0.5rem; }
   .day__header {
-    color: #0496ff;
+    color: #0FA68A;
+    background: #1A2252;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
     margin: 0 0 8px 0;
-    font-size: 16px; }
+    font-size: 1rem; }
     .day__header--weekend {
       color: #f14545; }
   .day__link {
-    color: #1a936f;
+    color: #0FA68A;
     text-decoration: none; }
     .day__link:hover {
       color: #00487c;
@@ -496,9 +500,9 @@ body {
     line-height: 24px; }
 
 .article__footer {
-  padding: 24px;
+  padding: 1.5rem;
   font-style: italic;
-  color: #3c359b; }
+  color: #392AC8; }
 
 .article__paragraph {
   padding: 0; }
@@ -521,7 +525,7 @@ body {
 .footer {
   position: fixed;
   width: 100%;
-  padding: 10px;
+  padding: 1rem;
   bottom: 0;
   left: 0;
   -webkit-box-sizing: border-box;
@@ -532,7 +536,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #666;
+  background-color: #392AC8;
   color: #ffffff; }
 
 /*# sourceMappingURL=main.css.map */
