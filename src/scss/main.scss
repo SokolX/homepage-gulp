@@ -109,16 +109,20 @@ body {
 
   @media (max-width: $telephone) {
     grid-template-areas:
-      "header header"
-      "about diary";
+      "header"
+      "diary";
       grid-template-columns: 1fr;
-    padding: 0 1rem;
+    padding: 0 0.2rem;
   }
 }
 
 .about {
   margin: 0.2rem;
   grid-area: about;
+
+  @media (min-width: $telephone) {
+    margin: 0.2rem;
+  }
 
   &__header {
     color: $white;

@@ -1,4 +1,4 @@
-# Simple page with [my cat Leopold](https://sokolx.github.io/homepage-gulp/)
+# Simple page about [my week plan](https://sokolx.github.io/planner-gulp/)
 ![Screen web page](github/example.png)
 
 
