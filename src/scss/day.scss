@@ -1,39 +1,85 @@
-
 .article {
   max-width: 43.75rem;
   margin: 4rem auto 1rem;
+  
+  @media (max-width: $telephone) {
+    margin: 4rem auto;
+    width: 75%;
+    
+  }
   
   &__footer {
     padding: 1.5rem;
     font-style: italic;
     color: $violet;
+
+    @media (max-width: $telephone) {
+      padding-left: 0;
+
+    }
+
   }
 
   &__paragraph {
     color: $white;
     line-height: 2rem;
     padding: 0;
+
+    @media (max-width: $telephone) {
+      margin: 1rem auto;
+      padding: 1rem 0;
+      line-height: 2.5rem;
+
+    }
+
   }
 
   &__picture {
     width: 100%;
     max-width: 200px;
     display: block;
+    border-radius: 1.5rem;
+    margin: 2rem;
+
+    @media (max-width: $telephone) {
+      border-radius: 5rem;
+      margin: 1rem auto;
+      
+    }
 
     &--left {
       float: left;
-      margin: 2rem;
+      
+      @media (max-width: $telephone) {
+        float: none;
+        padding: 1rem 0 0; 
+        
+      }
+
     }
 
     &--right {
       float: right;
-      margin: 2rem;
+
+      @media (max-width: $telephone) {
+        float: none;
+        padding: 1rem 0 0; 
+        margin: 1rem auto;
+
+      }
+
     }
+
   }
 
   &__title {
     color: $white;
     padding: 1.5rem 0 0 0;
+
+    @media (max-width: $telephone) {
+      text-align: center;
+
+    }
     
   }
 }

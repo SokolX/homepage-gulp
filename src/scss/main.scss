@@ -4,12 +4,14 @@
 
 html {
   box-sizing: border-box;
+  
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+
 }
 
 body {
@@ -30,13 +32,16 @@ body {
     @media (max-width: $telephone) {
       margin: 2rem auto;
       width: 75%;
+
     }
 
   }
 
   @media (max-width: $telephone) {
     grid-area: header;
+
   }
+
 }
 
 .site-header {
@@ -50,30 +55,41 @@ body {
 
   @media (max-width: $telephone) {
     min-height: 3rem;
+
   }
+
 }
 
 .navigation {
+
   &__list {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
+
     @media (max-width: $telephone) {
       flex-direction: column;
       display: none;
+
       &--visible {
         display: flex;
+
       }
+
     }
+
   }
 
   &__item {
     display: block;
     margin: 0 1rem;
+
     @media (max-width: $telephone) {
       margin: 1rem;
+
     }
+
   }
 
   &__link {
@@ -82,13 +98,17 @@ body {
 
     &:hover {
       color: $orange;
-      border-bottom: $hoverStyleLink; 
+      text-decoration: underline;
+
     }
+
   }
+
   &__switcher {
 
     @media (min-width: $telephone) {
       display: none;
+
     }
 
     @media (max-width: $telephone) {
@@ -98,8 +118,11 @@ body {
       right: 1rem;
       top: 1rem;
       color: $white;
+
     }
+
   }
+
 }
 
 .main {
@@ -119,6 +142,7 @@ body {
     padding: 0 0.2rem;
 
   }
+
 }
 
 .about {
@@ -148,8 +172,10 @@ body {
     text-decoration: none;
     
     &:hover {
-      border-bottom: $hoverStyleLink;
+      text-decoration: underline;
+
     }
+
   }
 
   &__picture {
@@ -213,7 +239,6 @@ body {
 
   }
 
-  
 }
 
 .day {
@@ -232,6 +257,7 @@ body {
     grid-area: day;
     width: 75%;
     align-content: center;
+
   }
 
   &__header {
@@ -245,10 +271,12 @@ body {
     @media (max-width: $telephone) {
       border-radius: 1.5rem;
       padding: 1rem;
+
     }
 
     &--weekend {
       color: $dayred;
+
     }
 
     
@@ -263,6 +291,7 @@ body {
       text-decoration: underline;
       
     }
+
   }
 
   &__paragraph {
@@ -273,9 +302,11 @@ body {
     @media (max-width: $telephone) {
       text-align: center;
       line-height: 2.5rem;
+
     }
 
   }
+
 }
 
 .footer {
@@ -289,4 +320,5 @@ body {
   justify-content: center;
   background-color: $navy;
   color: $white;
+
 }
