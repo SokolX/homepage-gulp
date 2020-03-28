@@ -17,7 +17,7 @@ body {
   background: $black;
   color: black;
   font-family: $fontFamily;
-  
+
 }
 
 .header {
@@ -275,45 +275,6 @@ body {
       line-height: 2.5rem;
     }
 
-  }
-}
-
-.article {
-  max-width: 43.75rem;
-  margin: 4rem auto 1rem;
-  
-  &__footer {
-    padding: 1.5rem;
-    font-style: italic;
-    color: $violet;
-  }
-
-  &__paragraph {
-    color: $white;
-    line-height: 2rem;
-    padding: 0;
-  }
-
-  &__picture {
-    width: 100%;
-    max-width: 200px;
-    display: block;
-
-    &--left {
-      float: left;
-      margin: 0 1rem 1rem 0;
-    }
-
-    &--right {
-      float: right;
-      margin: 0 0 0 1rem;
-    }
-  }
-
-  &__title {
-    color: $white;
-    padding: 1.5rem 0 0 0;
-    
   }
 }
 
