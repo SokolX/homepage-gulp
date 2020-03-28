@@ -311,27 +311,55 @@ template {
 .article {
   max-width: 43.75rem;
   margin: 4rem auto 1rem; }
+  @media (max-width: 640px) {
+    .article {
+      margin: 4rem auto;
+      width: 75%; } }
   .article__footer {
     padding: 1.5rem;
     font-style: italic;
     color: #392AC8; }
+    @media (max-width: 640px) {
+      .article__footer {
+        padding-left: 0; } }
   .article__paragraph {
     color: #ffffff;
     line-height: 2rem;
     padding: 0; }
+    @media (max-width: 640px) {
+      .article__paragraph {
+        margin: 1rem auto;
+        padding: 1rem 0;
+        line-height: 2.5rem; } }
   .article__picture {
     width: 100%;
     max-width: 200px;
-    display: block; }
+    display: block;
+    border-radius: 1.5rem;
+    margin: 2rem; }
+    @media (max-width: 640px) {
+      .article__picture {
+        border-radius: 5rem;
+        margin: 1rem auto; } }
     .article__picture--left {
-      float: left;
-      margin: 2rem; }
+      float: left; }
+      @media (max-width: 640px) {
+        .article__picture--left {
+          float: none;
+          padding: 1rem 0 0; } }
     .article__picture--right {
-      float: right;
-      margin: 2rem; }
+      float: right; }
+      @media (max-width: 640px) {
+        .article__picture--right {
+          float: none;
+          padding: 1rem 0 0;
+          margin: 1rem auto; } }
   .article__title {
     color: #ffffff;
     padding: 1.5rem 0 0 0; }
+    @media (max-width: 640px) {
+      .article__title {
+        text-align: center; } }
 
 html {
   -webkit-box-sizing: border-box;
@@ -414,7 +442,7 @@ body {
   text-decoration: none; }
   .navigation__link:hover {
     color: #E59400;
-    border-bottom: #E59400 solid 1px; }
+    text-decoration: underline; }
 
 @media (min-width: 640px) {
   .navigation__switcher {
@@ -476,7 +504,7 @@ body {
     color: #E59400;
     text-decoration: none; }
     .about__link:hover {
-      border-bottom: #E59400 solid 1px; }
+      text-decoration: underline; }
   .about__picture {
     width: 100%;
     max-width: 6.25rem;
